@@ -1,0 +1,69 @@
+
+2022-08-02 19:35:08 127.0.0.1
+6
+Curl error 6: Could not resolve host: updates.webasyst.com
+#0 C:\xampp\htdocs\wa\wa-system\file\waNet.class.php(541): waNet->handleCurlResponse(false)
+#1 C:\xampp\htdocs\wa\wa-system\file\waNet.class.php(180): waNet->runCurl('https://updates...', Array, 'GET', Array, NULL)
+#2 C:\xampp\htdocs\wa\wa-system\waid\waWebasystIDEndpointsConfig.class.php(61): waNet->query('https://updates...')
+#3 C:\xampp\htdocs\wa\wa-system\waid\waWebasystIDEndpointsConfig.class.php(36): waWebasystIDEndpointsConfig->requestEndpoints()
+#4 C:\xampp\htdocs\wa\wa-system\waid\waWebasystIDConfig.class.php(152): waWebasystIDEndpointsConfig->getEndpoints()
+#5 C:\xampp\htdocs\wa\wa-system\waid\waWebasystIDConfig.class.php(22): waWebasystIDConfig->generateDefaultConfig()
+#6 C:\xampp\htdocs\wa\wa-system\webasyst\lib\config\webasystConfig.class.php(37): waWebasystIDConfig->__construct()
+#7 C:\xampp\htdocs\wa\wa-system\webasyst\lib\actions\backend\webasystBackendCount.controller.php(36): webasystConfig->onCount()
+#8 C:\xampp\htdocs\wa\wa-system\controller\waController.class.php(21): webasystBackendCountController->execute()
+#9 C:\xampp\htdocs\wa\wa-system\controller\waJsonController.class.php(28): waController->run(NULL)
+#10 C:\xampp\htdocs\wa\wa-system\controller\waFrontController.class.php(263): waJsonController->run(NULL)
+#11 C:\xampp\htdocs\wa\wa-system\controller\waFrontController.class.php(190): waFrontController->runController(Object(webasystBackendCountController), NULL)
+#12 C:\xampp\htdocs\wa\wa-system\controller\waFrontController.class.php(84): waFrontController->execute(NULL, 'backend', 'count')
+#13 C:\xampp\htdocs\wa\wa-system\controller\waDispatch.class.php(162): waFrontController->dispatch()
+#14 C:\xampp\htdocs\wa\wa-system\controller\waDispatch.class.php(32): waDispatch->dispatchBackend('webasyst/')
+#15 C:\xampp\htdocs\wa\wa-system\waSystem.class.php(610): waDispatch->dispatch()
+#16 C:\xampp\htdocs\wa\index.php(7): waSystem->dispatch()
+#17 {main}
+
+2022-08-02 19:35:08 127.0.0.1
+array (
+  'url' => 'https://updates.webasyst.com/download/3.0/config/endpoints/?app=waid',
+  'method' => 'waWebasystIDEndpointsConfig::requestEndpoints',
+  'debug' => 
+  array (
+    'headers' => 
+    array (
+    ),
+    'body' => NULL,
+  ),
+)
+
+2022-08-03 19:35:55 127.0.0.1
+28
+Curl error 28: Failed to connect to updates.webasyst.com port 443: Timed out
+#0 C:\xampp\htdocs\wa\wa-system\file\waNet.class.php(541): waNet->handleCurlResponse(false)
+#1 C:\xampp\htdocs\wa\wa-system\file\waNet.class.php(180): waNet->runCurl('https://updates...', Array, 'GET', Array, NULL)
+#2 C:\xampp\htdocs\wa\wa-system\waid\waWebasystIDEndpointsConfig.class.php(61): waNet->query('https://updates...')
+#3 C:\xampp\htdocs\wa\wa-system\waid\waWebasystIDEndpointsConfig.class.php(36): waWebasystIDEndpointsConfig->requestEndpoints()
+#4 C:\xampp\htdocs\wa\wa-system\waid\waWebasystIDConfig.class.php(90): waWebasystIDEndpointsConfig->getEndpoints()
+#5 C:\xampp\htdocs\wa\wa-system\webasyst\lib\config\webasystConfig.class.php(37): waWebasystIDConfig->keepEndpointsSynchronized()
+#6 C:\xampp\htdocs\wa\wa-system\webasyst\lib\actions\backend\webasystBackendCount.controller.php(36): webasystConfig->onCount()
+#7 C:\xampp\htdocs\wa\wa-system\controller\waController.class.php(21): webasystBackendCountController->execute()
+#8 C:\xampp\htdocs\wa\wa-system\controller\waJsonController.class.php(28): waController->run(NULL)
+#9 C:\xampp\htdocs\wa\wa-system\controller\waFrontController.class.php(263): waJsonController->run(NULL)
+#10 C:\xampp\htdocs\wa\wa-system\controller\waFrontController.class.php(190): waFrontController->runController(Object(webasystBackendCountController), NULL)
+#11 C:\xampp\htdocs\wa\wa-system\controller\waFrontController.class.php(84): waFrontController->execute(NULL, 'backend', 'count')
+#12 C:\xampp\htdocs\wa\wa-system\controller\waDispatch.class.php(162): waFrontController->dispatch()
+#13 C:\xampp\htdocs\wa\wa-system\controller\waDispatch.class.php(32): waDispatch->dispatchBackend('webasyst/')
+#14 C:\xampp\htdocs\wa\wa-system\waSystem.class.php(610): waDispatch->dispatch()
+#15 C:\xampp\htdocs\wa\index.php(7): waSystem->dispatch()
+#16 {main}
+
+2022-08-03 19:35:55 127.0.0.1
+array (
+  'url' => 'https://updates.webasyst.com/download/3.0/config/endpoints/?app=waid',
+  'method' => 'waWebasystIDEndpointsConfig::requestEndpoints',
+  'debug' => 
+  array (
+    'headers' => 
+    array (
+    ),
+    'body' => NULL,
+  ),
+)
