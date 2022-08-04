@@ -18,6 +18,7 @@ class shopOptPlugin extends shopPlugin
             'control_wrapper'     => '<div class="field"><div class="name">%s</div><div class="value">%s%s</div></div>',
             'description_wrapper' => '<br><span class="hint">%s</span>',
         ));
+        unset($opt_price);
     }
 
     public function productSave(&$params)
@@ -54,7 +55,7 @@ class shopOptPlugin extends shopPlugin
         if($pathUrl[0] == 'opt') {
             if (!empty($params['products']) && is_array($params['products'])) {
                 foreach ($params['products'] as &$product) {
-                    $product['price'] = $opt['1'];
+                    $product['price'] = !empty($opt[$product['sku_id']]) ? $opt[$product['sku_id']] : null;
                 }
                 unset($product);
             }
