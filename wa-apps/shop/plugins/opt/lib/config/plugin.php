@@ -10,5 +10,6 @@ return array (
     'backend_product_sku_settings' => 'backendProductSkuSettings',
     'product_save' => 'productSave',
     'frontend_products' => 'frontendProducts',
+    'frontend_category' => 'frontendCategory'
   ),
 );

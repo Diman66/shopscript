@@ -18,7 +18,7 @@ class shopOptPlugin extends shopPlugin
             'control_wrapper'     => '<div class="field"><div class="name">%s</div><div class="value">%s%s</div></div>',
             'description_wrapper' => '<br><span class="hint">%s</span>',
         ));
-        unset($opt_price);
+        
     }
 
     public function productSave(&$params)
@@ -60,5 +60,12 @@ class shopOptPlugin extends shopPlugin
                 unset($product);
             }
         }
+    }
+
+    public function frontendCategory(&$category)
+    {
+        
+        //wa_dump(wa()->getRouting()->getUrl());
+        return '<a href="/shop/opt/category/' . $category['full_url'] . '/">Показать оптовые цены</a><div></div><a href="/shop/category/' . $category['full_url'] . '/">Показать розничные цены</a>';
     }
 }
